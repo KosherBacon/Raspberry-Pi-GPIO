@@ -17,3 +17,11 @@ sudo pip install RPi.GPIO
 sudo pip install feedparser
 sudo apt-get install python-crypto
 ```
+
+## Start Using
+
+Now that the server side is set up as a Linux service, we can now start using the it.
+If the service is not on already, start it now by running the command:
+```bash
+sudo service remoteGPIO.sh start
+```
