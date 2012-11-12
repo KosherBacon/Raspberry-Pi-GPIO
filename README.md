@@ -18,6 +18,12 @@ sudo pip install feedparser
 sudo apt-get install python-crypto
 ```
 
+Now you need to give remoteGPIO.sh and remoteGPIOstart.sh the ability to be executed.
+```bash
+sudo chmod +x remoteGPIO.sh
+sudo chmod +x remoteGPIOstart.sh
+```
+
 ## Start Using
 
 Now that the server side is set up as a Linux service, we can now start using the it.
