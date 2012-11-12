@@ -52,3 +52,6 @@ If the service is not on already, start it now by running the command:
 ```bash
 sudo service remoteGPIO.sh start
 ```
+
+I have written an app for Android that I will be releasing to the Play Store soon.
+I encourage everyone to write their own method for this program.
