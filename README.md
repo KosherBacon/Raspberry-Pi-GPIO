@@ -18,6 +18,14 @@ sudo pip install feedparser
 sudo apt-get install python-crypto
 ```
 
+Move the files into the correct directories:
+```bash
+sudo mv remoteGPIO.sh /etc/init.d/
+sudo mv remoteGPIOstart.sh /usr/sbin/
+sudo mv stored_values.ini /usr/sbin/
+sudo mv gpio_server.py /usr/sbin/
+```
+
 Now you need to give remoteGPIO.sh and remoteGPIOstart.sh the ability to be executed.
 ```bash
 sudo chmod +x remoteGPIO.sh
