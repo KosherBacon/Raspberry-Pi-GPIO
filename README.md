@@ -32,6 +32,16 @@ sudo chmod +x remoteGPIO.sh
 sudo chmod +x remoteGPIOstart.sh
 ```
 
+Add remoteGPIO.sh as a service.
+```bash
+sudo update-rc.d remoteGPIO.sh defaults
+```
+
+Make sure it is running.
+```bash
+sudo service remoteGPIO.sh start
+```
+
 ## Start Using
 
 Now that the server side is set up as a Linux service, we can now start using the it.
