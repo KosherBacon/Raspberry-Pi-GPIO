@@ -13,8 +13,8 @@ echo "**** Installing required libraries ****"
 echo "**** (python-pip, RPi.GPIO, feedparser, python-crypto) ****"
 
 apt-get update
-apt-get install python-pip, python-crypto -y
-pip install RPi.GPIO, feedparser
+apt-get install python-pip python-crypto -y
+pip install RPi.GPIO feedparser
 
 mv remoteGPIO.sh /etc/init.d
 
