@@ -21,9 +21,9 @@
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
 DESC="Allows remote usage of the output function from the GPIO pins."
 NAME=remoteGPIO
-DAEMON=/usr/sbin/remoteGPIOstart.sh
+DAEMON=/usr/sbin/remoteGPIO/remoteGPIOstart.sh
 DAEMON_ARGS="--options args"
-PIDFILE=/usr/sbin/remoteGPIOstart.pid
+PIDFILE=/usr/sbin/remoteGPIO/remoteGPIOstart.pid
 SCRIPTNAME=/etc/init.d/$NAME
  
 # Exit if the package is not installed

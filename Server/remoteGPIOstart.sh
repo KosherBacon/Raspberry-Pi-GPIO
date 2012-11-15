@@ -4,5 +4,5 @@
 # The '&' puts the process into background (as a daemon) 
 # The 'echo $! > mydaemon.pid'  write the process id to a file
 
-python /usr/sbin/gpio_server.py "$@" &
-echo $! > /usr/sbin/remoteGPIOstart.pid
+python /usr/sbin/remoteGPIO/gpio_server.py "$@" &
+echo $! > /usr/sbin/remoteGPIO/remoteGPIOstart.pid

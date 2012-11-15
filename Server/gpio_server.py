@@ -58,7 +58,7 @@ def decrypted(temp):
 
 # Save Config Method
 def saveConfig():
-    with open('/usr/sbin/stored_values.ini', 'w') as configfile:
+    with open('/usr/sbin/raspberryGPIO/stored_values.ini', 'w') as configfile:
         parser.write(configfile)
 # End Save Config Method
 
@@ -76,7 +76,7 @@ for index in range(len(pins)):
 
 # On Startup
 parser = ConfigParser.SafeConfigParser()
-parser.read('/usr/sbin/stored_values.ini')
+parser.read('/usr/sbin/rasbperryGPIO/stored_values.ini')
 counter = 1
 # Restore previous pin values
 while counter < len(pins):
