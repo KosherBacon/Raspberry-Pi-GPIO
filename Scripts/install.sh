@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
-PROJECT_ROOT="usr/sbin/remote_gpio"
+PROJECT_ROOT="usr/sbin/remoteGPIO"
 
 mkdir -p "$PROJECT_ROOT"
 cd "$PROJECT_ROOT"
@@ -25,3 +25,6 @@ update-rc.d remoteGPIO.sh defaults
 echo "**** Force starting service ****"
 
 service remoteGPIO.sh start
+
+echo "**** Using port 9001 as default ****"
+echo "**** Finished Installing!"
