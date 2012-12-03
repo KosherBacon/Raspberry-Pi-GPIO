@@ -54,4 +54,4 @@ sudo service remoteGPIO.sh start
 ```
 
 I have written an app for Android that I will be releasing to the Play Store soon.
-I encourage everyone to write their own method for this program.
+I encourage everyone to write their own method that is compatible with the backend of this application.
