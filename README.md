@@ -6,6 +6,7 @@ Remote control your Raspberry Pi's GPIO from an Android application.
 
 * All instructions assume you are using a version of Debian.
 * I am working on an all in one .sh script to install and setup the program.
+* These instructions assume some technical know-how, if you do not meet this requirement, it may be difficult to setup.
 
 Firstly you will need python.
 ```bash
