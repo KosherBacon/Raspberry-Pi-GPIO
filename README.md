@@ -55,3 +55,8 @@ sudo service remoteGPIO.sh start
 
 I have written an app for Android that I will be releasing to the Play Store soon.
 I encourage everyone to write their own method that is compatible with the backend of this application.
+
+## Upcoming Updates / Work in Progress
+
+I am working on a more efficient method of accessing the server from a device. I plan on utilizing ssh instead of my current method.
+This allows for for the system to be more efficient, and eliminates some setup steps for a better user experience.
