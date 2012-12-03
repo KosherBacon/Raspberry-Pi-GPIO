@@ -59,4 +59,4 @@ I encourage everyone to write their own method that is compatible with the backe
 ## Upcoming Updates / Work in Progress
 
 I am working on a more efficient method of accessing the server from a device. I plan on utilizing ssh instead of my current method.
-This allows for for the system to be more efficient, and eliminates some setup steps for a better user experience.
+This allows for the system to be more efficient, and eliminates some setup steps for a better user experience.
