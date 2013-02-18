@@ -18,16 +18,24 @@ You will also need the feedparser module and python-crypto module.
 ```bash
 sudo apt-get install python-pip
 sudo pip install RPi.GPIO
-sudo pip install feedparser
-sudo apt-get install python-crypto
+```
+
+I am using the wiringPi library, I recommend using the provided instructions.
+The following methods are provided on the libraries website.
+wiringPi website: https://projects.drogon.net/raspberry-pi/wiringpi/download-and-install/
+Git:
+```bash
+sudo apt-get install git-core
+sudo apt-get update
+sudo apt-get upgrade
+git clone git://git.drogon.net/wiringPi
+cd wiringPi
+./build
 ```
 
 Move the files into the correct directories:
 ```bash
-sudo mv remoteGPIO.sh /etc/init.d/
-sudo mv remoteGPIOstart.sh /usr/sbin/
-sudo mv stored_values.ini /usr/sbin/
-sudo mv gpio_server.py /usr/sbin/
+sudo mv RemotePi_2/ /usr/bin/
 ```
 
 Now you need to give remoteGPIO.sh and remoteGPIOstart.sh the ability to be executed.
