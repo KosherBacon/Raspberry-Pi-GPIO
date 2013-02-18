@@ -21,7 +21,7 @@ sudo pip install RPi.GPIO
 ```
 
 I am using the wiringPi library, I recommend using the provided instructions.
-The following methods are provided on the libraries website.
+The following methods are provided on the library's website.
 wiringPi website: https://projects.drogon.net/raspberry-pi/wiringpi/download-and-install/
 
 Git:
