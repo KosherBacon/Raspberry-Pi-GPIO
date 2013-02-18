@@ -23,6 +23,7 @@ sudo pip install RPi.GPIO
 I am using the wiringPi library, I recommend using the provided instructions.
 The following methods are provided on the libraries website.
 wiringPi website: https://projects.drogon.net/raspberry-pi/wiringpi/download-and-install/
+
 Git:
 ```bash
 sudo apt-get install git-core
@@ -40,27 +41,20 @@ sudo mv RemotePi_2/ /usr/bin/
 
 Now you need to give remoteGPIO.sh and remoteGPIOstart.sh the ability to be executed.
 ```bash
-sudo chmod +x remoteGPIO.sh
-sudo chmod +x remoteGPIOstart.sh
-```
-
-Add remoteGPIO.sh as a service.
-```bash
-sudo update-rc.d remoteGPIO.sh defaults
-```
-
-Make sure it is running.
-```bash
-sudo service remoteGPIO.sh start
+cd /usr/bin/RemotePi_2/
+sudo chmod +x remotePi.py
+sudo chmod 777 remotePi.py
 ```
 
 ## Start Using
 
-Now that the server side is set up as a Linux service, we can now start using the it.
-If the service is not on already, start it now by running the command:
+Now that the server side is set up as a Linux command, we can now start using the it.
+
+Check to make sure that all of the setup was done correctly:
 ```bash
-sudo service remoteGPIO.sh start
+cd /usr/bin/RemotePi_2/; sudo python remotePi.py info
 ```
+If you received a long odd looking string, good, it means the program is working!
 
 I have written an app for Android that I will be releasing to the Play Store soon.
 I encourage everyone to write their own method that is compatible with the backend of this application.
