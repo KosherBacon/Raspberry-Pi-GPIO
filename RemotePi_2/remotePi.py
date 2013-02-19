@@ -122,6 +122,18 @@ if len(sys.argv) > 1:
 		runCommand("gpio -g write " + sys.argv[2] + " 0")
 		parser.set(sys.argv[2], "status", "False")
 		saveConfig()
+	elif sys.argv[1] == "allOn":
+		for name in parser.sections():
+			runCommand("gpio -g mode " + name + " out")
+			runCommand("gpio -g write " + name + " 1")
+			parser.set(name, "status", "True")
+		saveConfig()
+	elif sys.argv[1] == "allOff":
+		for name in parser.sections():
+			runCommand("gpio -g mode " + name + " out")
+			runCommand("gpio -g write " + name + " 0")
+			parser.set(name, "status", "False")
+		saveConfig()
 	elif sys.argv[1] == "name" and sys.argv[2].isdigit() and sys.argv[3]:
 		i = 3
 		temp = ""
