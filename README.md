@@ -52,7 +52,7 @@ Now that the server side is set up as a Linux command, we can now start using th
 
 Check to make sure that all of the setup was done correctly:
 ```bash
-cd /usr/bin/RemotePi_2/; sudo python remotePi.py info
+cd /usr/bin/RemotePi_2/; python remotePi.py info
 ```
 If you received a long odd looking string, good, it means the program is working!
 
