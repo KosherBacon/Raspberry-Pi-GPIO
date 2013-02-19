@@ -1,5 +1,5 @@
 # Imports
-import RPi.GPIO as GPIO
+#import RPi.GPIO as GPIO
 import sys, re, ConfigParser
 import subprocess as sp
 # End Imports
@@ -38,8 +38,8 @@ def containsDigits(d):
 # End Contains Digits Method
 
 # Setting GPIO Up
-GPIO.setmode(GPIO.BCM)
-GPIO.setwarnings(False)
+#GPIO.setmode(GPIO.BCM)
+#GPIO.setwarnings(False)
 # End Setting GPIO Up
 
 # Make sure only available IO pins can be used
@@ -109,13 +109,17 @@ if need_save:
 # Perform Input
 if len(sys.argv) > 1:
 	if sys.argv[1] == "enable" and sys.argv[2].isdigit():
-		GPIO.setup(int(sys.argv[2]), GPIO.OUT)
-		GPIO.output(int(sys.argv[2]), True)
+		#GPIO.setup(int(sys.argv[2]), GPIO.OUT)
+		#GPIO.output(int(sys.argv[2]), True)
+		runCommand("gpio -g mode " + sys.argv[2] + " out")
+		runCommand("gpio -g write " + sys.argv[2] + " 1") 
 		parser.set(sys.argv[2], "status", "True")
 		saveConfig()
 	elif sys.argv[1] == "disable" and sys.argv[2].isdigit():
-		GPIO.setup(int(sys.argv[2]), GPIO.OUT)
-		GPIO.output(int(sys.argv[2]), False)
+		#GPIO.setup(int(sys.argv[2]), GPIO.OUT)
+		#GPIO.output(int(sys.argv[2]), False)
+		runCommand("gpio -g mode " + sys.argv[2] + " out")
+		runCommand("gpio -g write " + sys.argv[2] + " 0")
 		parser.set(sys.argv[2], "status", "False")
 		saveConfig()
 	elif sys.argv[1] == "name" and sys.argv[2].isdigit() and sys.argv[3]:
