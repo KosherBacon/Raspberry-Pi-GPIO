@@ -43,7 +43,7 @@ Now you need to give remoteGPIO.sh and remoteGPIOstart.sh the ability to be exec
 ```bash
 cd /usr/bin/RemotePi_2/
 sudo chmod +x remotePi.py
-sudo chmod 777 remotePi.py
+sudo chmod 777 *
 ```
 
 ## Start Using
