@@ -108,33 +108,33 @@ if need_save:
 # Make sure there are enough arguements
 # Perform Input
 if len(sys.argv) > 1:
-	if sys.argv[1] == "enable" and sys.argv[2].isdigit():
+	if sys.argv[1].lower() == "enable" and sys.argv[2].isdigit():
 		#GPIO.setup(int(sys.argv[2]), GPIO.OUT)
 		#GPIO.output(int(sys.argv[2]), True)
 		runCommand("gpio -g mode " + sys.argv[2] + " out")
 		runCommand("gpio -g write " + sys.argv[2] + " 1") 
 		parser.set(sys.argv[2], "status", "True")
 		saveConfig()
-	elif sys.argv[1] == "disable" and sys.argv[2].isdigit():
+	elif sys.argv[1].lower() == "disable" and sys.argv[2].isdigit():
 		#GPIO.setup(int(sys.argv[2]), GPIO.OUT)
 		#GPIO.output(int(sys.argv[2]), False)
 		runCommand("gpio -g mode " + sys.argv[2] + " out")
 		runCommand("gpio -g write " + sys.argv[2] + " 0")
 		parser.set(sys.argv[2], "status", "False")
 		saveConfig()
-	elif sys.argv[1] == "allOn":
+	elif sys.argv[1].lower == "allon":
 		for name in parser.sections():
 			runCommand("gpio -g mode " + name + " out")
 			runCommand("gpio -g write " + name + " 1")
 			parser.set(name, "status", "True")
 		saveConfig()
-	elif sys.argv[1] == "allOff":
+	elif sys.argv[1].lower() == "alloff":
 		for name in parser.sections():
 			runCommand("gpio -g mode " + name + " out")
 			runCommand("gpio -g write " + name + " 0")
 			parser.set(name, "status", "False")
 		saveConfig()
-	elif sys.argv[1] == "name" and sys.argv[2].isdigit() and sys.argv[3]:
+	elif sys.argv[1].lower() == "name" and sys.argv[2].isdigit() and sys.argv[3]:
 		i = 3
 		temp = ""
 		while i < len(sys.argv):
@@ -142,7 +142,7 @@ if len(sys.argv) > 1:
 			i += 1
 		parser.set(sys.argv[2], 'name', temp)
 		saveConfig()
-	elif sys.argv[1] == "info":
+	elif sys.argv[1].lower() == "info":
 		msg = ""
 		for i, f in enumerate(parser.sections()):
 			msg += f
@@ -154,9 +154,9 @@ if len(sys.argv) > 1:
 			msg += ("%^%^%" if not i == int(len(parser.sections()) - 1) else "")
 		#print f, parser.get(f, 'status',), parser.get(f, 'name')
 		print msg
-	elif sys.argv[1] == "reset":
+	elif sys.argv[1].lower() == "reset":
 		reset()
-	elif sys.argv[1] == "version":
+	elif sys.argv[1].lower() == "version":
 		print version
 	#print 'Number of arguments:', len(sys.argv), 'arguments.'
 	#print 'Argument List:', str(sys.argv)
