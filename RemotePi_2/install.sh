@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 set -e
 PROJECT_ROOT="usr/bin/RemotePi_2"
