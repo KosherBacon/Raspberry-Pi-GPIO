@@ -13,7 +13,8 @@ Firstly you will need python.
 sudo apt-get install python2.7
 ```
 
-I am using the wiringPi library, I recommend using the provided instructions.
+I use the wiringPi revision 2 library, I recommend using the provided 
+instructions.
 The following methods are provided on the library's website.
 wiringPi website: https://projects.drogon.net/raspberry-pi/wiringpi/download-and-install/
 
