@@ -2,7 +2,7 @@
 
 # Imports
 #import RPi.GPIO as GPIO
-import sys, re, ConfigParser
+import sys, re, configparser
 import subprocess as sp
 # End Imports
 
@@ -30,7 +30,7 @@ def runCommand(command):
 # End Command Method
 
 # Setup ConfigParser
-parser = ConfigParser.ConfigParser()
+parser = configparser.ConfigParser()
 parser.read('stored_values.ini')
 
 # Contains Digits Method
@@ -126,7 +126,7 @@ if len(sys.argv) > 1:
 		parser.set(sys.argv[2], "status", "False")
 		saveConfig()
 	elif sys.argv[1] == "allon":
-		print "adsfsafs"
+		print ("adsfsafs")
 		for name in parser.sections():
 			runCommand("gpio -g mode " + name + " out")
 			runCommand("gpio -g write " + name + " 1")
@@ -157,11 +157,11 @@ if len(sys.argv) > 1:
 				#print '  %s = %s' % (name, value)
 			msg += ("%^%^%" if not i == int(len(parser.sections()) - 1) else "")
 		#print f, parser.get(f, 'status',), parser.get(f, 'name')
-		print msg
+		print (msg)
 	elif sys.argv[1] == "reset":
 		reset()
 	elif sys.argv[1] == "version":
-		print version
+		print (version)
 	#print 'Number of arguments:', len(sys.argv), 'arguments.'
 	#print 'Argument List:', str(sys.argv)
 # End Perform Input
